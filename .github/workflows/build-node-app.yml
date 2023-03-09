@@ -8,7 +8,9 @@ on:
 jobs:
   AngularTourOfHeroes:
     runs-on: ubuntu-latest
-    stpes:
+
+    steps:
+      
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
