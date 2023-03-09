@@ -1,0 +1,16 @@
+name : Build AngularTourOfHeroes application
+
+on:
+  push:
+    - main
+
+jobs:
+  AngularTourOfHeroes:
+    runs-on: ubuntu-latest
+    stpes:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+      
