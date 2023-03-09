@@ -2,7 +2,8 @@ name : Build AngularTourOfHeroes application
 
 on:
   push:
-    - main
+    branches:
+      - main
 
 jobs:
   AngularTourOfHeroes:
@@ -13,4 +14,3 @@ jobs:
         with:
           node-version: '18'
       - run: npm install
-      
