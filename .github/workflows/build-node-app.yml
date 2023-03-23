@@ -6,7 +6,7 @@ name : Build AngularTourOfHeroes application
 #       - main
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
   AngularTourOfHeroes:
