@@ -34,13 +34,13 @@ jobs:
         with:
           images: amit4498/demoapps
           
-      #- name: Build and push Docker image
-       # uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
-        #with:
-         # context: .
-          #push: true
-          #tags: ${{ steps.meta.outputs.tags }}
-          #labels: ${{ steps.meta.outputs.labels }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          push: true
+          tags: angulartour
+          labels: ${{ steps.meta.outputs.labels }}
 
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -65,4 +65,4 @@ jobs:
           # Push is a shorthand for --output=type=registry
           push: true
           # List of tags
-          tags: amit4498/demoapps
+          tags: amit4498/demoapps:angulartourofhero
