@@ -54,7 +54,7 @@ jobs:
           # List of metadata for an image
           labels: 1
           # Always attempt to pull all referenced images
-          pull: true
+          #pull: true
           # Push is a shorthand for --output=type=registry
           push: true
           # List of tags
