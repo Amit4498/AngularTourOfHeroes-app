@@ -34,16 +34,20 @@ jobs:
         with:
           images: amit4498/demoapps
           
-      - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+      #- name: Build and push Docker image
+       # uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        #with:
+         # context: .
+          #push: true
+          #tags: ${{ steps.meta.outputs.tags }}
+          #labels: ${{ steps.meta.outputs.labels }}
 
       - name: Check out the repo
         uses: actions/checkout@v3
+        
+      - name: check te path PWD
+        run: |
+          pwd
 
       - name: Build and push Docker images
         # You may pin to the exact commit or the version.
@@ -53,7 +57,7 @@ jobs:
           # Build's context is the set of files located in the specified PATH or URL
           #context: # optional
           # Path to the Dockerfile
-          file: .
+          file: ./
           # List of metadata for an image
           labels: 1
           # Always attempt to pull all referenced images
