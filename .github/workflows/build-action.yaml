@@ -6,7 +6,7 @@ on:
 
 jobs: 
   angular-tour-of-heros:
-    runs-on: [linux, ubuntu-latest]
+    runs-on: ubuntu-latest
 
     steps: 
       - name: checkout to repo
