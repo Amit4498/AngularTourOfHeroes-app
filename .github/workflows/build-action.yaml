@@ -15,7 +15,7 @@ jobs:
           pwd 
 
       - name: build using action.yaml
-        uses: .github/actions@develop
+        uses: ./.github/actions@develop
         with:
           app-dir: "."
 
