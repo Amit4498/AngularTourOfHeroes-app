@@ -11,9 +11,11 @@ jobs:
     steps: 
       - name: checkout to repo
         uses: actions/checkout@v3
+      - run: |
+          pwd 
 
       - name: build using action.yaml
-        uses: ./.github/actions
+        uses: .github/actions@develop
         with:
           app-dir: "."
 
