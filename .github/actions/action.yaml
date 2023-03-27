@@ -1,0 +1,31 @@
+name: "Build Angular, React, Node app"
+description: "Build"
+
+inputs:
+  app-dir: "DIR"
+    required: true
+  
+
+runs:
+  using: "composite"
+  steps:
+    - name: use node ver.
+      uses: actions/setup-node@v3
+      with:
+        node-version-file: '${{ inputs.app-dir }}/.nvmrc'
+
+    - name: Run the tests
+      working-directory: "${{ inputs.app-dir }}"
+      run: npm i
+      shell: bash
+
+    - name: Install node Deps
+      working-directory: "${{ inputs.app-dir }}"
+      run: npm run test 
+      shell: bash
+
+    - name: Install node Deps
+      working-directory: "${{ inputs.app-dir }}"
+      run: npm run build
+      shell: bash
+

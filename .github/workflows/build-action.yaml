@@ -1,0 +1,19 @@
+name: Build using actions
+
+on:
+  workflow_dispatch:
+
+
+jobs: 
+  angular-tour-of-heros:
+    runs-on: [linux, ubuntu-latest]
+
+    steps: 
+      - name: checkout to repo
+        uses: actions/checkout@v3
+
+      - name: build using action.yaml
+        uses: ./.github/actions
+        with:
+          app-dir: "."
+
