@@ -17,5 +17,5 @@ jobs:
       - name: build using action.yaml
         uses: ./.github/actions
         with:
-          app-dir: "."
+          app-dir: "./"
 

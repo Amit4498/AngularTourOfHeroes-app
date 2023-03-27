@@ -5,7 +5,6 @@ inputs:
   app-dir: "DIR"
     required: true
   
-
 runs:
   using: "composite"
   steps:
