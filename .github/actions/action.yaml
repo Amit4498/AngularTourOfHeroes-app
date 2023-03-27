@@ -2,9 +2,10 @@ name: "Build Angular, React, Node app"
 description: "Build"
 
 inputs:
-  app-dir: "DIR"
-    required: true
-  
+  app-dir:
+    description: "DIR"
+    required: true 
+
 runs:
   using: "composite"
   steps:
