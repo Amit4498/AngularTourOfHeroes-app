@@ -3,7 +3,7 @@ description: "Build"
 
 inputs:
   app-dir: "DIR"
-   required: true 
+    required: true 
   
 runs:
   using: "composite"
